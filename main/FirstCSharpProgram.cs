@@ -1,9 +1,60 @@
 ﻿using System; // Import the System namespace
 
+public struct ValueType
+{
+	public int X;
+	public int Y;
+}
+
+public class Pointer
+{
+	public int X;
+	public int Y;
+}
+
 class Program
 {
 	static void Main(string[] args)
 	{
+
+		void ValueType()
+		{
+			// -------- VALUE TYPES ----------
+			ValueType p1 = new ValueType();
+			p1.X = 7;
+
+			// A value type cannot have a null value
+
+			ValueType p2 = p1; // Assignment causes copy
+			
+			Console.WriteLine("\nValue Types");
+			Console.WriteLine(p1.X); // 7
+			Console.WriteLine(p2.X); // 7
+
+			p1.X = 9;
+			Console.WriteLine(p1.X); // 9
+			Console.WriteLine(p2.X + "\n"); // 7
+		}
+
+		void Pointers()
+		{
+            
+			Pointer p1 = new Pointer();
+			p1.X = 8;
+
+			Pointer p2 = p1; // Copies p1 reference
+
+			Console.WriteLine("\nPunteros");
+			Console.WriteLine(p1.X); // 8
+			Console.WriteLine(p2.X); // 8
+
+			p1.X = 10;
+
+			Console.WriteLine(p1.X); // 10
+			Console.WriteLine(p2.X + "\n"); // 10
+        }
+
+
 
 		int x = 30 + 40;
 		string message = "Hola Mundo";
@@ -18,6 +69,8 @@ class Program
 		Console.WriteLine(FeetToInches(30)); // Lower-level functions
 		Console.WriteLine(FeetToInches(40));
 		SayHello();
+		ValueType();
+		Pointers();
 
 		/// ---------------------------------------
 		/// Built-in types
