@@ -16,7 +16,32 @@ class Program
 {
 	static void Main(string[] args)
 	{
+		string nombre = "Marcos Solist";
+		int edad = 20;
+		bool activo = false;
+		DateTime fecha = DateTime.Now;
+		float precio = 20.21f;
+		decimal descuento = 20.1m;
 
+		Console.WriteLine(fecha);
+		Console.WriteLine($"El nombre de la persona es: {nombre} y su edad es {edad + 5}");
+
+		const int dni = 23919911;
+		Console.WriteLine(dni);
+		// dni = 10; -> Error
+
+		// Casting
+		char letra = 'A';
+		int codigoASCII = letra;
+		Console.WriteLine(codigoASCII);
+
+		string palabra = "123456";
+		int numero = Convert.ToInt32(palabra);
+		Console.WriteLine(numero);
+
+		int million = 1_000_000;
+		Console.WriteLine($"My first million is: {million}");
+		
 		void ValueType()
 		{
 			// -------- VALUE TYPES ----------
@@ -53,8 +78,6 @@ class Program
 			Console.WriteLine(p1.X); // 10
 			Console.WriteLine(p2.X + "\n"); // 10
         }
-
-
 
 		int x = 30 + 40;
 		string message = "Hola Mundo";
