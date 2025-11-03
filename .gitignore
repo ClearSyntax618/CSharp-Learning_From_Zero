@@ -1,2 +1,5 @@
-*.csproj
+bin
+obj
+.vs
 *.sln
+*.csproj
