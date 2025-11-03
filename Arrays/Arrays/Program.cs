@@ -34,3 +34,35 @@ Console.WriteLine("El array nombres: " + string.Join(",", nombres));
 /* 
   • 3. Dado un array de enteros, encontrar el valor máximo y el mínimo.
 */
+int[] iMaximoMinimo = [10, 1, 12, 4, 11];
+
+int maximo = enteros[0];
+int minimo = enteros[0];
+
+encontrarMaximo(iMaximoMinimo);
+encontrarMinimo(iMaximoMinimo);
+
+void encontrarMaximo(int[] enteros)
+{
+    for (int i = 0; i < enteros.Length; i++)
+    {
+        if (enteros[i] > maximo)
+        {
+            maximo = enteros[i];
+        }
+    }
+
+    Console.WriteLine($"El valor maximo es: {maximo}");
+}
+void encontrarMinimo(int[] enteros)
+{
+    for (int i = 0; i < enteros.Length; i++)
+    {
+        if (enteros[i] < minimo)
+        {
+            minimo = enteros[i];
+        }
+    }
+
+    Console.WriteLine($"El valor minimo es: {minimo}");
+}
